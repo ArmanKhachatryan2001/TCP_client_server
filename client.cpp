@@ -39,7 +39,7 @@ int main()
     while (true) {
         str = "";
         std::getline(std::cin, str);
-        if (str == "ex") {
+        if (str == "exit") {
             t1.detach();
             str = "__came out__";
             str = name + str;
