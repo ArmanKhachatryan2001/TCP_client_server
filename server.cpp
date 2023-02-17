@@ -43,7 +43,7 @@ int main()
 
     while (true) {
         std::getline(std::cin, server_write);
-        if (server_write == "ex") {
+        if (server_write == "exit") {
             break;
         }
 
