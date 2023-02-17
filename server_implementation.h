@@ -144,7 +144,8 @@ void message_client(const std::vector<int>& client_array, std::map<std::string, 
 
          std::string name = client_name_line(client_array[i], client_name, client_array);
          if (client_array[i] != - 1) {
-            size_t result = send(client_array[i], name.c_str(), name.size() + 1, 0);
+            std::string online = "The specified user or users are online.\n" + name;
+            size_t result = send(client_array[i], online.c_str(), online.size() + 1, 0);
             if (result == - 1) {
                std::cout << "[ERROR] Message cannot be sent!\n";
             }
